@@ -1,0 +1,12 @@
+
+<div class="country-flag-container">
+    <ul>
+        <li *ngFor="let pais of paises">
+            <img [src]="pais.flags.png" alt="flag" />
+            <h1>{{pais.name.common}}</h1>
+            <p>Population: </p>
+            <p>Region: </p>
+            <p>Capital: </p>
+        </li>
+    </ul>
+</div>

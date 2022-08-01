@@ -1,0 +1,34 @@
+.superior-bar{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    height: 4rem;
+}
+.titulo-container{
+    width: 50%;
+}
+.titulo-container h1{
+    margin: 0;
+    margin-left: 3.5rem;
+    font-size: 1.8rem;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 800;
+}
+.dark-mode-container{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 50%;
+    padding-right: 3.7rem;
+}
+.dark-mode-container p{
+    font-size: 1rem;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
+}
+.dark-mode-container img{
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-right: 0.5rem;
+}
