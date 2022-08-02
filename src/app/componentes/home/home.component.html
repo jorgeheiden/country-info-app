@@ -4,14 +4,14 @@
     </div>
     <div class="search-container">
         <div class="input-search-container">
-            <app-input-search></app-input-search>
+            <app-input-search (enviarDatoCompPadre)="paisBuscado($event)"></app-input-search>
         </div>
         <div class="region-search-container">
             <app-region-search></app-region-search>
         </div>
     </div>
     <div class="flags-container">
-        <app-country-flag></app-country-flag>
+        <app-country-flag [paisBuscado]="paisBusc"></app-country-flag>
     </div>
 </div>
 

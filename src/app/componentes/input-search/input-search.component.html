@@ -1,5 +1,5 @@
 <div class="input-container">
-    <input type="text" [formControl]="inputForm" placeholder="Search for a country...">
+    <input type="text"  [formControl]="inputForm" placeholder="Search for a country..." #busqueda>
     <h4 *ngIf="inputForm.hasError('required') && inputForm.dirty" >Campo requerido</h4>
-    <button [disabled]="inputForm.invalid" type="submit" (click)="buscar()">Prueba</button>
+    <button [disabled]="inputForm.invalid" type="submit"  (click)="buscar()">Prueba</button>
 </div>

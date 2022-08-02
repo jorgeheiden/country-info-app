@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
+  paisBusc:any
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  paisBuscado(evento:String){
+    this.paisBusc = evento
+    console.log("componente padre HOME: "+ this.paisBusc)
+  }
+  
 }
