@@ -9,7 +9,8 @@ import { RegionSearchComponent } from './componentes/region-search/region-search
 import { CountryFlagComponent } from './componentes/country-flag/country-flag.component';
 import { HomeComponent } from './componentes/home/home.component';
 import { HttpClientModule} from '@angular/common/http'
-import { FormsModule, ReactiveFormsModule} from '@angular/forms'
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { DetallesComponent } from './componentes/detalles/detalles.component'
 
 @NgModule({
   declarations: [
@@ -19,13 +20,14 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms'
     RegionSearchComponent,
     CountryFlagComponent,
     HomeComponent,
+    DetallesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

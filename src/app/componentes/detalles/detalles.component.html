@@ -1,0 +1,39 @@
+<app-superior-bar></app-superior-bar>
+<!--
+    <h1>{{(dato$ | async)?.name}}</h1>
+    <img [src]="dataPais[0].flags.png" alt="">
+-->
+<div class="container">
+    <div class="container-flag">
+        <div class="back">
+            <button class="btn" routerLink="/home"><img class="icono" src="../../../assets/Imagenes/Iconos/flecha.svg" alt=""> Back</button>
+        </div>
+        <div class="flag">
+            <img src="../../../assets/Imagenes/Bandera/germany.png" alt="">
+        </div>
+    </div>
+    <div class="container-datos">
+        <div class="datos">
+            <div class="dato-1">
+                <h2>Belgium</h2>
+                <p><span>Native Name:</span> Belgie</p>
+                <p><span>Population:</span> 11.319.511</p>
+                <p><span>Sub Region:</span> Western Europa</p>
+                <p><span>Capital:</span> Brussels</p>
+            </div>
+            <div class="dato-2">
+                <p><span>Top Level Domain:</span> be</p>
+                <p><span>Currencies:</span> Euro</p>
+                <p><span>Languages:</span> Dutch, French, German</p>
+            </div>
+        </div>
+        <div class="fronteras">
+            <p>Border Countries:</p>
+            <ul class="fronteras-lista">
+                <li>France</li>
+                <li>Germany</li>
+                <li>Netherlands</li>
+            </ul>
+        </div>
+    </div>
+</div>

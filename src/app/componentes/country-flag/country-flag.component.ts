@@ -28,10 +28,6 @@ export class CountryFlagComponent implements  OnInit {
   valorDesdeHome(valor:any){
     console.log("componente country-flag: "+valor)
 
-    this.servicio.buscarPorNombre(valor).subscribe(data =>{
-      console.log(data)
-      this.paises = data
-    })
 
   }
 

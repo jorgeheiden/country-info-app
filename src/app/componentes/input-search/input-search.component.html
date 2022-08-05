@@ -1,5 +1,11 @@
 <div class="input-container">
-    <input type="text"  [formControl]="inputForm" placeholder="Search for a country..." #busqueda>
-    <h4 *ngIf="inputForm.hasError('required') && inputForm.dirty" >Campo requerido</h4>
-    <button [disabled]="inputForm.invalid" type="submit"  (click)="buscar()">Prueba</button>
+    <div>
+        <input type="text" [formControl]="inputForm" placeholder="Search for a country..." #busqueda>
+        <!--<p *ngIf="inputForm.hasError('required') && inputForm.dirty">Campo requerido</p>-->
+    </div>
+</div>
+<div *ngIf="resultadoBusqueda" class="resultado-busqueda">
+    <ul>
+        <li (click)="paisSeleccionado(res)" *ngFor="let res of resultadoBusqueda" routerLink="/detalles">{{res.name.common}}</li>
+    </ul>
 </div>

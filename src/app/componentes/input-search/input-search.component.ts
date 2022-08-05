@@ -1,26 +1,30 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, Validators} from '@angular/forms'
 import { debounceTime, distinctUntilChanged, filter, map, tap } from 'rxjs';
-import { ServiceService } from 'src/app/servicios/service.service';
+import {  ServiceService } from 'src/app/servicios/service.service';
 @Component({
   selector: 'app-input-search',
   templateUrl: './input-search.component.html',
   styleUrls: ['./input-search.component.scss']
 })
 export class InputSearchComponent implements OnInit {
+  
 
+  paisS:any
   //Se envia el pais buscado desde le <input> al componente padre home
   @Output() enviarDatoCompPadre = new EventEmitter<string>()
-  
+
+ 
   constructor(private servicio:ServiceService) { }
 
   ngOnInit(): void {
     //*LLAMADO A LA FUNCION
     this.buscar()
+
   }
     
   inputForm = new FormControl('', [Validators.required])
-  
+  resultadoBusqueda!:any;
   buscar(){
     //BUSQUEDA AUTOMATICA:
     //debounceTime() Metodo que emite una vez que pasaron los milisegundos estableidos
@@ -33,11 +37,28 @@ export class InputSearchComponent implements OnInit {
       debounceTime(600),
       distinctUntilChanged(),
       filter( (busqueda:string) => busqueda !== ''),
-      //Se emite la busqueda al componente padre
-      tap( (busqueda:string) => this.enviarDatoCompPadre.emit(busqueda))
+      //Se emite la busqueda 
+      tap( (busqueda:string) => {
+        this.enviarDatoCompPadre.emit(busqueda)
+
+        this.servicio.buscarPorNombre(busqueda).subscribe(data =>{
+         
+           this.resultadoBusqueda = data
+          console.log(this.resultadoBusqueda)
+        })
+    
+      })
     )
     .subscribe();
     
   }
-  
+  paisSeleccionado(pais:string){
+    this.paisS = pais
+    console.log(this.paisS.name.common)
+    this.resultadoBusqueda = []
+
+   //Se envia un valor nuevo al servicio mediante el metodo Set
+   this.servicio.setSharingObservableDato = {name: this.paisS.name.common}
+  }
+
 }

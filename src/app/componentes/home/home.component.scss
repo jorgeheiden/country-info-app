@@ -3,9 +3,7 @@
     height: 100vh;
     background-color: hsl(0, 0%, 98%);
 }
-.bar-container{
-    box-shadow: 5px 0px 5px gray;
-}
+
 .search-container{
     display: flex;
     align-items: flex-end;
@@ -15,6 +13,7 @@
 }
 .input-search-container{
     width: 50%;
+    height: 3rem;
 }
 .region-search-container{
     display: flex;

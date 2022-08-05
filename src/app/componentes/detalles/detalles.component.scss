@@ -1,0 +1,103 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+.container-flag{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin-top: 4rem;
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    padding: 0.4rem 2rem 0.4rem 1.5rem;
+    background-color: white;
+    box-shadow: 3px 3px 5px 1px rgba(0, 0, 0, 0.493);
+    cursor: pointer;
+}
+.icono{
+    width: 1.3rem;
+    margin-right: 0.5rem;
+}
+.btn:hover{
+    background-color: rgba(240, 240, 240, 0.699);
+}
+.btn:active{
+    transform: scale(0.9);
+}
+.container-datos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    margin-top: 9rem;
+}
+.datos{
+    display: flex;
+    align-items: center;
+}
+.dato-2{
+    margin-top: 0.4rem;
+    margin-left: 6rem;
+    font-family: 'Nunito Sans', sans-serif;
+    
+}
+.dato-1 p{
+    margin-bottom: 0.8rem;
+    font-family: 'Nunito Sans', sans-serif;
+    
+}
+.dato-1 span{
+    font-weight: 800;
+}
+.dato-1 h2{
+    margin: 0 0 2rem 0;
+    font-family: 'Nunito Sans', sans-serif;
+    
+}
+.dato-2 p{
+    margin-bottom: 0.5rem;
+    
+}
+.dato-2 span{
+    font-weight: 800;
+}
+.fronteras{
+    display: flex;
+    align-items: center;
+}
+.fronteras p{
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 800;
+}
+.fronteras-lista{
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+.fronteras-lista li{
+    font-family: 'Nunito Sans', sans-serif;
+    box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.24);
+    border-radius: 4px;
+    margin: 0 0 0 1rem;
+    padding: 0.2rem 0.8rem;
+}
+.back{
+    width: 70%;
+    
+    margin-bottom: 3.5rem;
+}
+.flag{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+img{
+    width: 70%;
+    height: auto;
+}
