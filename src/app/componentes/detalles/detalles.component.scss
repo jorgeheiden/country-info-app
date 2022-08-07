@@ -42,9 +42,29 @@
     align-items: center;
 }
 .dato-2{
-    margin-top: 0.4rem;
+    margin-top: 0;
     margin-left: 6rem;
+    margin-bottom: 2.2rem;
     font-family: 'Nunito Sans', sans-serif;
+    
+}
+.dato-2 p{
+    margin-bottom: 0.5rem; 
+}
+.dato-2 span{
+    font-weight: 800;
+}
+.currencies{
+    display: flex;
+    padding: 0;
+}
+.currencies p{
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 800;
+    margin: 0;
+}
+.currencies li{
+    list-style: none;
     
 }
 .dato-1 p{
@@ -56,27 +76,24 @@
     font-weight: 800;
 }
 .dato-1 h2{
-    margin: 0 0 2rem 0;
+    margin: 0.4rem 0 1.5rem 0;
     font-family: 'Nunito Sans', sans-serif;
     
 }
-.dato-2 p{
-    margin-bottom: 0.5rem;
-    
-}
-.dato-2 span{
-    font-weight: 800;
-}
+
+
 .fronteras{
     display: flex;
-    align-items: center;
+    
 }
 .fronteras p{
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 800;
+    width:30%;
 }
 .fronteras-lista{
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     padding: 0;
 }
@@ -84,8 +101,12 @@
     font-family: 'Nunito Sans', sans-serif;
     box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.24);
     border-radius: 4px;
-    margin: 0 0 0 1rem;
+    margin: 0 0 1rem 1rem;
     padding: 0.2rem 0.8rem;
+    cursor: pointer;
+}
+.fronteras-lista li:hover{
+    background-color: rgba(240, 240, 240, 0.699);
 }
 .back{
     width: 70%;

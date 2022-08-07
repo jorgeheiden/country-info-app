@@ -34,5 +34,8 @@ export class ServiceService {
     return this.http.get<any>(`https://restcountries.com/v3.1/name/${pais}`)
     
   }
+ buscarPorCodigo(codigos:any){
+  return this.http.get<any>(`https://restcountries.com/v3.1/alpha?codes=${codigos.join(',')}`)
+ }
 
 }
