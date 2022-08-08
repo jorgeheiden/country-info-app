@@ -34,7 +34,7 @@ export class InputSearchComponent implements OnInit {
     this.inputForm.valueChanges
     .pipe(
       map( (busqueda:string) => busqueda.trim()),
-      debounceTime(600),
+      debounceTime(300),
       distinctUntilChanged(),
       filter( (busqueda:string) => busqueda !== ''),
       //Se emite la busqueda 

@@ -1,10 +1,18 @@
-<form action="">
-    <select id="region" name="region">
-      <option value="">Filter by Region</option>
-      <option value="africa">Africa</option>
+<!--Como obtener el valor seleccionado de un <Select>:
+  1) crear un [formGroup] asignarle un nombre
+  2) crear un formControlName asignarle un nombre
+  3) [ngValue]="" captura el valor seleccionado y se lo asigna al formControl
+  4) se obtiene en el .ts el valor del [formGruop] mediante un GET: this.selectForm.get('region')?.value
+  5) Se crea un medodo con un evento (change) para capturar los cambios
+-->
+
+<form action="" [formGroup]="selectForm" >
+    <select id="region" name="region" formControlName="region" (change)="regionSeleccionada()">
+      <option value="" selected disable>Filter by Region</option>
+      <option value="africa" [ngValue]="">Africa</option>
       <option value="america">America</option>
       <option value="asia">Asia</option>
-      <option value="europa">Europa</option>
+      <option value="europe">Europa</option>
       <option value="oceania">Oceania</option>
     </select> 
 </form>

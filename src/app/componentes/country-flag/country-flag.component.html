@@ -1,7 +1,7 @@
 
 <div class="country-flag-container">
     <ul>
-        <li *ngFor="let pais of paises">
+        <li *ngFor="let pais of paises" (click)="clickCard(pais.name.common)">
             <img [src]="pais.flags.png" alt="flag" />
             <h1>{{pais.name.common}}</h1>
             <p>Population: </p>
