@@ -1,8 +1,6 @@
 <div class="input-container">
-    <div>
         <input type="text" [formControl]="inputForm" placeholder="Search for a country..." #busqueda>
         <!--<p *ngIf="inputForm.hasError('required') && inputForm.dirty">Campo requerido</p>-->
-    </div>
 </div>
 <div *ngIf="resultadoBusqueda" class="resultado-busqueda">
     <ul>

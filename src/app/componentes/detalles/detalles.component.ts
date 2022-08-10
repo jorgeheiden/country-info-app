@@ -11,6 +11,7 @@ import {Persona, ServiceService } from 'src/app/servicios/service.service';
 })
 export class DetallesComponent implements OnInit {
 pais!:any
+
 dataPais!:any
 curr!:any
 lenguaje!:any

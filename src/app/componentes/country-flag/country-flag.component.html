@@ -4,9 +4,9 @@
         <li *ngFor="let pais of paises" (click)="clickCard(pais.name.common)">
             <img [src]="pais.flags.png" alt="flag" />
             <h1>{{pais.name.common}}</h1>
-            <p>Population: </p>
-            <p>Region: </p>
-            <p>Capital: </p>
+            <p><span>Population: </span>{{pais.population | number}} </p>
+            <p><span>Region: </span>{{pais.region}}</p>
+            <p><span>Capital: </span>{{pais.capital}}</p>
         </li>
     </ul>
 </div>

@@ -10,3 +10,9 @@ select{
     font-weight: 600;
     border-radius: 4px;
 }
+@media screen and (max-width: 575.98px){
+    select{
+        margin: 0 0 0 0;
+    }
+    
+}

@@ -6,13 +6,13 @@
   5) Se crea un medodo con un evento (change) para capturar los cambios
 -->
 
-<form action="" [formGroup]="selectForm" >
-    <select id="region" name="region" formControlName="region" (change)="regionSeleccionada()">
-      <option value="" selected disable>Filter by Region</option>
-      <option value="africa" [ngValue]="">Africa</option>
-      <option value="america">America</option>
-      <option value="asia">Asia</option>
-      <option value="europe">Europa</option>
-      <option value="oceania">Oceania</option>
-    </select> 
-</form>
+  <form action="" [formGroup]="selectForm" >
+      <select id="region" name="region" formControlName="region" (change)="regionSeleccionada()">
+        <option value="" selected disable>Filter by Region</option>
+        <option value="africa" [ngValue]="">Africa</option>
+        <option value="america">America</option>
+        <option value="asia">Asia</option>
+        <option value="europe">Europa</option>
+        <option value="oceania">Oceania</option>
+      </select> 
+  </form>

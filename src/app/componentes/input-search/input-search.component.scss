@@ -7,7 +7,7 @@
 }
 .input-container input{
     margin-left: 3rem;
-    width: 100%;
+    width: 40%;
     height: 2rem;
     border-radius: 0.2rem;
     border: none;
@@ -35,9 +35,29 @@ ul{
 
 .resultado-busqueda{
     position: relative;
-    z-index: 10;
+    z-index: 15;
     top: -0.2rem;
     width: 20rem;
     left: 3rem;
     background-color: rgba(199, 212, 212, 0.932);
+}
+
+@media screen and (max-width: 575.98px){
+ .input-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+ }
+ .input-container input{
+    margin: 0.7rem 0 0 0;
+    padding-left: 1rem;
+    width: 90%;
+ }
+ .resultado-busqueda{
+    left: 0.6rem;
+    width: 94%;
+ }
+ li{
+    padding-left: 1rem;
+ }
 }

@@ -110,7 +110,6 @@
 }
 .back{
     width: 70%;
-    
     margin-bottom: 3.5rem;
 }
 .flag{
@@ -121,4 +120,58 @@
 img{
     width: 70%;
     height: auto;
+}
+@media screen and (max-width: 575.98px){
+    .container{
+        flex-direction: column;
+    }
+    .container-datos{
+        margin-top: 0;
+        width: 100%;
+    }
+    .datos{
+        flex-direction: column;
+        justify-content: start;
+    }
+    .dato-1{
+        width: 85%;
+    }
+    .dato-1 h2{
+        margin-bottom: 1rem;
+    }
+    .dato-1 p{
+        margin: 0 0 0.8rem 0;
+    }
+    .dato-2{
+        margin: 0;
+        width: 85%;
+    }
+    .dato-2 p{
+        margin: 1.5rem 0 0.8rem 0;
+    }
+    .container-flag{
+        width: 100%;
+        margin-top: 2rem;
+    }
+    img{
+        width: 85%
+    }
+    .back{
+        width: 85%;
+        margin-bottom: 2rem;
+    }
+    
+    .fronteras{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .fronteras p{
+        width: 85%;
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+    }
+    .frontera ul{
+        width: 85%;
+    }
 }
