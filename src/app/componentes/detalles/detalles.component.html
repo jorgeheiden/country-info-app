@@ -3,10 +3,10 @@
     <h1>{{(dato$ | async)?.name}}</h1>
     <img [src]="dataPais[0].flags.png" alt="">
 -->
-<div class="container">
+<div class="container" [ngClass]="{'backG':(darkMode$ | async)?.valor}">
     <div class="container-flag">
         <div class="back">
-            <button class="btn" routerLink="/home"><img class="icono" src="../../../assets/Imagenes/Iconos/flecha.svg" alt=""> Back</button>
+            <button class="btn" [ngClass]="{'btnBackG' : (darkMode$ | async)?.valor}" routerLink="/home"><img class="icono" [src]="arrowIcon" alt=""> Back</button>
         </div>
         <div class="flag">
             <img [src]="dataPais.flags.png" alt="">
@@ -14,7 +14,7 @@
     </div>
     <div class="container-datos">
         <div class="datos">
-            <div class="dato-1">
+            <div class="dato-1" [ngClass]="{'colorText': (darkMode$|async)?.valor}">
                 <h2>{{dataPais.name.common}}</h2>
                 <p><span>Official Name:</span> {{dataPais.name.official}}</p>
                 <p><span>Population:</span> {{dataPais.population | number}}</p>
@@ -22,7 +22,7 @@
                 <p><span>Sub Region:</span> {{dataPais.subregion}}</p>
                 <p><span>Capital:</span> {{dataPais.capital}}</p>
             </div>
-            <div class="dato-2">
+            <div class="dato-2" [ngClass]="{'colorText': (darkMode$|async)?.valor}">
                 <p><span>Top Level Domain:</span> {{dataPais.tld}}</p>
                 <!--Se llama a una funcion que va a convertir un array en un string y separarlo por coma-->
                 <p><span>Currencies: </span>{{currencieComma(curr)}}</p>
@@ -30,9 +30,9 @@
             </div>
         </div>
         <div class="fronteras">
-            <p>Border Countries:</p>
-            <ul class="fronteras-lista">
-                <li (click)="paisSeleccionado(paisLimitrofe)" *ngFor="let paisLimitrofe of paisesLimitrofes" >{{paisLimitrofe.name.common}}</li>  
+            <p [ngClass]="{'colorText': (darkMode$|async)?.valor}" >Border Countries:</p>
+            <ul class="fronteras-lista" >
+                <li [ngClass]="{'btnBackG' : (darkMode$ | async)?.valor}" (click)="paisSeleccionado(paisLimitrofe)" *ngFor="let paisLimitrofe of paisesLimitrofes" >{{paisLimitrofe.name.common}}</li>  
             </ul>
         </div>
     </div>

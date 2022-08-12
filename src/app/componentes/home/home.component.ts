@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { DarkModeService } from 'src/app/servicios/dark-mode.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   paisBusc:any
-  constructor() { }
 
+  darkMode$: Observable<any>
+  constructor(private darkmodeservice: DarkModeService) { 
+    this.darkMode$ = darkmodeservice.getDarkModeObservable
+  }
+
+  
   ngOnInit(): void {
+    
   }
 
   paisBuscado(evento:String){

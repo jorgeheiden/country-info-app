@@ -7,7 +7,7 @@
 -->
 
   <form action="" [formGroup]="selectForm" >
-      <select id="region" name="region" formControlName="region" (change)="regionSeleccionada()">
+      <select id="region" [ngClass]="{'backG': (darkMode$ | async)?.valor}" name="region" formControlName="region" (change)="regionSeleccionada()">
         <option value="" selected disable>Filter by Region</option>
         <option value="africa" [ngValue]="">Africa</option>
         <option value="america">America</option>

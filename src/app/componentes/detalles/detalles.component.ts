@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { DarkModeService } from 'src/app/servicios/dark-mode.service';
 //Importar la interface Persona creada en el servicio
 import {Persona, ServiceService } from 'src/app/servicios/service.service';
 
@@ -16,12 +17,15 @@ dataPais!:any
 curr!:any
 lenguaje!:any
 paisesLimitrofes!:any
+darkMode$: Observable<any>
+darkModeValor!:any
+arrowIcon = "../../../assets/Imagenes/Iconos/back-arrow-black.png"
 //se crea una propiedad dato$
   dato$:Observable<Persona>
-  constructor(private servicio:ServiceService, private router: Router) { 
+  constructor(private servicio:ServiceService, private router: Router, private darkmodeservice:DarkModeService) { 
     //se le asigna a dato$ el valor que PROVIENE DEL SERVICIO
     this.dato$ = this.servicio.getSharingObservable;
-    
+    this.darkMode$ = darkmodeservice.getDarkModeObservable
   }
 
   ngOnInit(): void {
@@ -48,6 +52,17 @@ paisesLimitrofes!:any
       })
     
    })
+   //Obtencion y asignacion de la propiedad darkMode$
+    this.darkMode$.subscribe( (res) =>{
+      this.darkModeValor = res
+    })
+   //Asignacion de icono boton Back
+   if(this.darkModeValor.valor == false){
+    this.arrowIcon = "../../../assets/Imagenes/Iconos/back-arrow-black.png"
+   }
+   else{
+    this.arrowIcon = "../../../assets/Imagenes/Iconos/back-arrow-white.png"
+   }
       
   }
   // llamada desde la vista. Toma un array de objetos, lo convierte en string y separa sus elementos con coma 

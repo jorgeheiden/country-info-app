@@ -1,3 +1,4 @@
+
 .superior-bar{
     display: flex;
     align-items: center;
@@ -8,6 +9,7 @@
 }
 .titulo-container{
     width: 50%;
+    cursor: pointer;
 }
 .titulo-container h1{
     margin: 0;
@@ -22,6 +24,7 @@
     justify-content: right;
     width: 50%;
     padding-right: 3.7rem;
+    cursor: pointer;
 }
 .dark-mode-container p{
     font-size: 1rem;
@@ -32,6 +35,7 @@
     width: 1.4rem;
     height: 1.4rem;
     margin-right: 0.5rem;
+    
 }
 
 @media screen and (max-width: 575.98px){
@@ -56,3 +60,13 @@
         margin-bottom: 0.2rem;
     }
  }
+//Dark Mode
+.color{
+    background-color: hsl(209, 23%, 22%);
+}
+.titulo{
+    color: white;
+}
+.boton{
+    color: white;
+}

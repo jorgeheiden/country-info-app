@@ -1,7 +1,7 @@
 
-<div class="country-flag-container">
+<div class="country-flag-container" [ngClass]="{'backG': (darkMode$ | async)?.valor}">
     <ul>
-        <li *ngFor="let pais of paises" (click)="clickCard(pais.name.common)">
+        <li [ngClass]="{'backGCard': (darkMode$ |async)?.valor}" *ngFor="let pais of paises" (click)="clickCard(pais.name.common)" >
             <img [src]="pais.flags.png" alt="flag" />
             <h1>{{pais.name.common}}</h1>
             <p><span>Population: </span>{{pais.population | number}} </p>

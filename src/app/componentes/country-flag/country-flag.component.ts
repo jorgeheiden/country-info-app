@@ -1,6 +1,7 @@
 import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { DarkModeService } from 'src/app/servicios/dark-mode.service';
 import { RegionService } from 'src/app/servicios/region.service';
 import { ServiceService } from 'src/app/servicios/service.service';
 
@@ -15,10 +16,15 @@ export class CountryFlagComponent implements  OnInit {
 
   region$: Observable<any>
   paises:any;
-
-  constructor(private servicio:ServiceService, private router:Router, private regionservice:RegionService) {
+  darkMode$: Observable<any>
+  constructor(private servicio:ServiceService, 
+    private router:Router, 
+    private regionservice:RegionService,
+    private darkmodeservice : DarkModeService
+    ) {
 
     this.region$ = regionservice.getRegion
+    this.darkMode$ = darkmodeservice.getDarkModeObservable
    }
  
 

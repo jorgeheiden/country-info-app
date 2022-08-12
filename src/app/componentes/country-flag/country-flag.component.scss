@@ -1,11 +1,24 @@
 
+.country-flag-container{
+    background-color: hsl(0, 0%, 98%);
+}
+//Dark Mode
+.backG{
+    background-color: transparent;
+}
+.backGCard{
+    background-color: hsl(209, 23%, 22%)!important;
+    color: white;
+    box-shadow: none!important;
+}
+
 .country-flag-container ul{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
     padding: 0;
-    background-color: hsl(0, 0%, 98%);
+    
 }
 .country-flag-container li{
     list-style: none;

@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, Validators} from '@angular/forms'
-import { debounceTime, distinctUntilChanged, filter, map, tap } from 'rxjs';
+import { debounceTime, distinctUntilChanged, filter, map, Observable, tap } from 'rxjs';
+import { DarkModeService } from 'src/app/servicios/dark-mode.service';
 import {  ServiceService } from 'src/app/servicios/service.service';
 @Component({
   selector: 'app-input-search',
@@ -14,12 +15,16 @@ export class InputSearchComponent implements OnInit {
   //Se envia el pais buscado desde le <input> al componente padre home
   @Output() enviarDatoCompPadre = new EventEmitter<string>()
 
- 
-  constructor(private servicio:ServiceService) { }
+  darkMode$: Observable<any>
+  constructor(private servicio:ServiceService, private darkmodeservice: DarkModeService) { 
+    
+    this.darkMode$ = darkmodeservice.getDarkModeObservable
+  }
 
   ngOnInit(): void {
     //*LLAMADO A LA FUNCION
     this.buscar()
+
 
   }
     
