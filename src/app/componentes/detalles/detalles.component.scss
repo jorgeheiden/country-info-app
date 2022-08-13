@@ -1,7 +1,5 @@
 .container{
-    display: flex;
-    justify-content: center;
-    height: 89.7vh;
+    
 }
 //Dark Mode
 .backG{
@@ -99,8 +97,6 @@
 
 .fronteras{
     display: flex;
-    padding-bottom: 5rem;
-    
 }
 .fronteras p{
     font-family: 'Nunito Sans', sans-serif;
@@ -181,6 +177,7 @@ img{
         flex-direction: column;
         align-items: center;
         width: 100%;
+        padding-bottom: 3rem;
     }
     .fronteras p{
         width: 85%;

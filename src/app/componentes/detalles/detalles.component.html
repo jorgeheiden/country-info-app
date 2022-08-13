@@ -1,9 +1,12 @@
-<app-superior-bar></app-superior-bar>
+
 <!--
     <h1>{{(dato$ | async)?.name}}</h1>
     <img [src]="dataPais[0].flags.png" alt="">
 -->
 <div class="container" [ngClass]="{'backG':(darkMode$ | async)?.valor}">
+
+    <app-superior-bar></app-superior-bar>
+    
     <div class="container-flag">
         <div class="back">
             <button class="btn" [ngClass]="{'btnBackG' : (darkMode$ | async)?.valor}" routerLink="/home"><img class="icono" [src]="arrowIcon" alt=""> Back</button>
