@@ -1,5 +1,9 @@
 .container{
+
     
+}
+.container-elementos{
+    display: flex;
 }
 //Dark Mode
 .backG{
@@ -135,6 +139,9 @@ img{
 }
 @media screen and (max-width: 575.98px){
     .container{
+        flex-direction: column;
+    }
+    .container-elementos{
         flex-direction: column;
     }
     .container-datos{
