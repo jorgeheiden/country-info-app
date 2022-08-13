@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="container-datos">
-            <div class="datos">
+            <div class="datos" [ngClass]="{'backG':(darkMode$ | async)?.valor}">
                 <div class="dato-1" [ngClass]="{'colorText': (darkMode$|async)?.valor}">
                     <h2>{{dataPais.name.common}}</h2>
                     <p><span>Official Name:</span> {{dataPais.name.official}}</p>
@@ -34,7 +34,7 @@
                     <p><span>Languages:</span> {{lenguajeComma(lenguaje)}}</p>
                 </div>
             </div>
-            <div class="fronteras">
+            <div class="fronteras" [ngClass]="{'backG':(darkMode$ | async)?.valor}">
                 <p [ngClass]="{'colorText': (darkMode$|async)?.valor}">Border Countries:</p>
                 <ul class="fronteras-lista">
                     <li [ngClass]="{'btnBackG' : (darkMode$ | async)?.valor}" (click)="paisSeleccionado(paisLimitrofe)"
